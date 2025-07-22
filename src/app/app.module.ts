@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyCreateComponent } from './company-create/company-create.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const routes: Routes = [
   { path: 'companies', component: CompanyListComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     CompanyListComponent,
     CompanyCreateComponent,
-    AppRoutingModule  
+    AppRoutingModule,   
+    MatSnackBarModule
   ],
   bootstrap: [AppComponent]
 })
