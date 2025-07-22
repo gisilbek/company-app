@@ -16,6 +16,6 @@ export class CompanyService {
   }
 
   createCompanyWithAdmin(data: any) {
-    return this.http.post(`${this.apiUrl}/with-admins`, data);
+    return this.http.post(`${this.apiUrl}/with-admin`, data);
   }
 }
