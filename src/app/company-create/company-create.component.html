@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Crear Empresa con Administrador</h2>
+  <form (ngSubmit)="createCompany()" class="p-4 border rounded shadow-sm bg-light">
+
+    <h4 class="mb-3">Empresa</h4>
+    
+    <div class="mb-3">
+      <label class="form-label">Nombre:</label>
+      <input class="form-control" [(ngModel)]="data.company.name" name="companyName" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Descripción:</label>
+      <input class="form-control" [(ngModel)]="data.company.description" name="companyDescription" required />
+    </div>
+
+    <h4 class="mt-4 mb-3">Administrador</h4>
+
+    <div class="mb-3">
+      <label class="form-label">Nombre:</label>
+      <input class="form-control" [(ngModel)]="data.admin.name" name="adminName" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email:</label>
+      <input class="form-control" [(ngModel)]="data.admin.email" name="adminEmail" type="email" required />
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label">Contraseña:</label>
+      <input class="form-control" [(ngModel)]="data.admin.password" name="adminPassword" type="password" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear Empresa</button>
+  </form>
+</div>
+
+
