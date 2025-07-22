@@ -11,11 +11,11 @@ export class CompanyService {
   constructor(private http: HttpClient) {}
 
   getCompaniesWithAdmins(): Observable<any[]> {
-   return this.http.get<any[]>('http://localhost:3000/companies/with-admins');
+   return this.http.get<any[]>('https://company-management-ayoo.onrender.com/companies/with-admins');
   }
 
   createCompanyWithAdmin(data: any) {
-    return this.http.post('http://localhost:3000/companies/with-admin', data);
+    return this.http.post('https://company-management-ayoo.onrender.com/companies/with-admin', data);
   }
 
 }
