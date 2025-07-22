@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompanyService {
-  private apiUrl = 'http://localhost:3000/companies';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
   getCompaniesWithAdmins(): Observable<any[]> {
-   return this.http.get<any[]>('https://company-management-ayoo.onrender.com/companies/with-admins');
+    return this.http.get<any[]>(`${this.apiUrl}/with-admins`);
   }
 
   createCompanyWithAdmin(data: any) {
-    return this.http.post('https://company-management-ayoo.onrender.com/companies/with-admin', data);
+    return this.http.post(`${this.apiUrl}/with-admins`, data);
   }
-
 }
-
-
