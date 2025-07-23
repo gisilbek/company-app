@@ -75,8 +75,8 @@ company-management
 Si aún no lo has hecho, clona el repositorio del proyecto:
 
 ```bash
-git clone https://github.com/gisilbek/company-management.git backend
-cd backend
+git clone https://github.com/gisilbek/company-management.git 
+cd company-management
 ```
 
 #### b) **Instalar las dependencias**
@@ -108,8 +108,8 @@ El servidor backend estará corriendo en **`http://localhost:3000`** por defecto
 Clona el repositorio del frontend:
 
 ```bash
-git clone https://github.com/gisilbek/company-app.git frontend
-cd frontend
+git clone https://github.com/gisilbek/company-app.git 
+cd company-app
 ```
 
 #### b) **Instalar las dependencias**
@@ -118,13 +118,22 @@ cd frontend
 npm install
 ```
 
+
 #### c) **Configurar la URL del backend**
 
 Asegúrate de que en tu servicio (`company.service.ts`) esté configurada correctamente la URL del backend (por ejemplo, `http://localhost:3000/companies`).
 
+
 #### d) **Iniciar el frontend**
 
 Para iniciar el frontend en modo de desarrollo, ejecuta:
+
+Debe modificar la ruta del import de enviroments  **`/environments/environment.prod`**  por **`/environments/environment`** 
+que se encuentra en el archivo company.services el mismo se ubica en la ruta **`src\app\company.service.ts`** .
+
+/environments/environment
+**`http://localhost:4200`**.
+import { environment } from '../environments/environment';
 
 ```bash
 ng serve
